@@ -46,6 +46,15 @@ function runEnter() {
 
 }
 
+// Display error if no record found
+if (tableData.length == 0) {
+    d3.select("tbody")
+      .append("tr")
+      .append("td")
+        .attr("colspan", 7)
+        .html("<h4>No Records Found, Please Check Date</h4>");
+  };
+
 // Reset whole page
 
 function reset () {
